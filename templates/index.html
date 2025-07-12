@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Medical Report Summarizer</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🩺 Medical Report Summarizer</h1>
+    <form action="/upload-report/" enctype="multipart/form-data" method="post">
+      <input type="file" name="file" accept="image/png, image/jpeg" required>
+      <button type="submit">Upload & Summarize</button>
+    </form>
+
+    {% if result %}
+    <div class="result">
+        <h2>📝 Summary</h2>
+        <div class="output">{{ result | safe }}</div>
+    </div>
+    {% endif %}
+  </div>
+</body>
+</html>
