@@ -10,12 +10,12 @@
     <h1>🩺 Medical Report Summarizer</h1>
     <form action="/upload-report/" enctype="multipart/form-data" method="post">
       <input type="file" name="file" accept="image/png, image/jpeg" required>
-      <button type="submit">Upload & Summarize</button>
+      <button type="submit">Summarize</button>
     </form>
 
     {% if result %}
     <div class="result">
-        <h2>📝 Summary</h2>
+        <h2>📝</h2>
         <div class="output">{{ result | safe }}</div>
     </div>
     {% endif %}
