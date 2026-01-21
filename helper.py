@@ -18,7 +18,7 @@ client = Groq(api_key=GROQ_API_KEY)
 def extract_text_from_image(image_path):
     image = Image.open(image_path)
     text = pytesseract.image_to_string(image, lang='eng')
-    print("OCR TEXT:", text)
+    
     return text
 
 def generate_prompt(text):
